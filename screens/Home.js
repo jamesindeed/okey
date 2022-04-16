@@ -31,7 +31,7 @@ const Home = () => {
             zIndex: -1,
           }}
         >
-          <View style={{ flex: 1, backgroundColor: COLORS.primary }} />
+          <View style={{ flex: 1, backgroundColor: COLORS.background }} />
           {/* <View style={{ flex: 1, backgroundColor: COLORS.background }} /> */}
         </View>
       </View>

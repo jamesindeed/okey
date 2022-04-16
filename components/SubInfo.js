@@ -1,4 +1,5 @@
 import { View, Text, Image } from 'react-native';
+import { withSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { SIZES, FONTS, COLORS, SHADOWS, assets } from '../constants';
 
@@ -33,12 +34,12 @@ export const Price = ({ price }) => {
       <Image
         source={assets.eth}
         resizeMode='contain'
-        style={{ width: 20, height: 20, marginRight: 2 }}
+        style={{ width: 23, height: 23, marginRight: 2 }}
       />
       <Text
         style={{
           fontFamily: FONTS.medium,
-          fontSize: SIZES.font,
+          fontSize: SIZES.medium,
           color: COLORS.primary,
         }}
       >
@@ -50,15 +51,29 @@ export const Price = ({ price }) => {
 
 const ImageCmp = ({ imgUrl, index }) => {
   return (
-    <Image
-      source={imgUrl}
-      resizeMode='contain'
+    <View
       style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         width: 38,
         height: 38,
+        backgroundColor: COLORS.white,
+        borderRadius: 50,
         marginLeft: index === 0 ? 0 : -SIZES.font,
       }}
-    />
+    >
+      <Image
+        source={imgUrl}
+        resizeMode='contain'
+        style={{
+          width: 34,
+          height: 34,
+
+          // marginLeft: index === 0 ? 0 : -SIZES.font,
+        }}
+      />
+    </View>
   );
 };
 
