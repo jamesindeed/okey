@@ -9,7 +9,7 @@ export const CircleButton = ({ imgUrl, handlePress, ...props }) => {
         width: 40,
         height: 40,
         backgroundColor: COLORS.white,
-        position: 'absolute',
+        // position: 'absolute',
         borderRadius: SIZES.extraLarge,
         alignItems: 'center',
         justifyContent: 'center',
