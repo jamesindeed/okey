@@ -1,12 +1,14 @@
 export const COLORS = {
-  primary: '#0b0a0f',
+  primary: '#1a1a1a',
   secondary: '#5de4c7',
-  background: '#16151f',
+  background: '#f7f7f7',
   accent: '#f087bd',
   accent2: '#fffac2',
   white: '#FFF',
   black: '#000',
   grey: '#c5c6c7',
+  // searchBar: 'rgba(255, 209, 231, 0.8)',
+  searchBar: 'rgba(255, 255, 255, 0.4)',
 };
 
 export const SIZES = {
