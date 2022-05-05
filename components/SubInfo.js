@@ -1,6 +1,7 @@
 import { View, Text, Image } from 'react-native';
 import { withSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { CircleButton } from './Button';
 import { SIZES, FONTS, COLORS, SHADOWS, assets } from '../constants';
 
 export const Title = ({ title, subTitle, titleSize, subTitleSize }) => {
@@ -8,7 +9,7 @@ export const Title = ({ title, subTitle, titleSize, subTitleSize }) => {
     <View>
       <Text
         style={{
-          fontFamily: FONTS.semiBold,
+          fontFamily: FONTS.bold,
           fontSize: titleSize,
           color: COLORS.primary,
         }}
@@ -30,16 +31,18 @@ export const Title = ({ title, subTitle, titleSize, subTitleSize }) => {
 
 export const Price = ({ price }) => {
   return (
-    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+    <View
+      style={{ flexDirection: 'row', alignItems: 'center', marginLeft: -5 }}
+    >
       <Image
         source={assets.eth}
         resizeMode='contain'
-        style={{ width: 23, height: 23, marginRight: 2 }}
+        style={{ width: 24, height: 24, marginRight: 2 }}
       />
       <Text
         style={{
-          fontFamily: FONTS.medium,
-          fontSize: SIZES.medium,
+          fontFamily: FONTS.semiBold,
+          fontSize: SIZES.large,
           color: COLORS.primary,
         }}
       >
@@ -79,7 +82,7 @@ const ImageCmp = ({ imgUrl, index }) => {
 
 export const People = () => {
   return (
-    <View style={{ flexDirection: 'row', marginTop: -20 }}>
+    <View style={{ flexDirection: 'row' }}>
       {[assets.person02, assets.person03, assets.person04].map(
         (imgUrl, index) => (
           <ImageCmp imgUrl={imgUrl} index={index} key={`People-${index}`} />
@@ -133,13 +136,14 @@ export const SubInfo = () => {
       style={{
         width: '100%',
         paddingHorizontal: SIZES.font,
-        // marginTop: -SIZES.extraLarge,
+        marginTop: -20,
         flexDirection: 'row',
         justifyContent: 'space-between',
       }}
     >
       <People />
-      <EndDate />
+      <CircleButton imgUrl={assets.like} />
+      {/* <EndDate /> */}
     </View>
   );
 };

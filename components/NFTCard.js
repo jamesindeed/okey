@@ -11,13 +11,13 @@ const NFTCard = ({ data }) => {
   return (
     <View
       style={{
-        paddingHorizontal: SIZES.small,
-        paddingTop: SIZES.small,
+        paddingHorizontal: SIZES.large,
+        paddingTop: SIZES.large,
         paddingBottom: SIZES.base,
         backgroundColor: COLORS.white,
-        borderRadius: SIZES.font,
+        borderRadius: 30,
         marginBottom: SIZES.large,
-        margin: SIZES.small,
+        margin: SIZES.medium,
         ...SHADOWS.dark,
       }}
     >
@@ -33,18 +33,18 @@ const NFTCard = ({ data }) => {
           style={{
             width: '100%',
             height: '100%',
-            borderRadius: SIZES.font,
+            borderRadius: 25,
           }}
         />
 
-        <CircleButton imgUrl={assets.like} right={10} top={10} />
+        {/* <CircleButton imgUrl={assets.like} right={10} top={10} /> */}
       </View>
       <SubInfo />
       <View style={{ width: '100%', padding: SIZES.font }}>
         <Title
           title={data.name}
           subTitle={data.creator}
-          titleSize={SIZES.large}
+          titleSize={SIZES.extraLarge}
           subTitleSize={SIZES.small}
         />
         <View
@@ -57,7 +57,7 @@ const NFTCard = ({ data }) => {
         >
           <Price price={data.price} />
           <RectButton
-            minWidth={120}
+            minWidth={100}
             fontSize={SIZES.font}
             handlePress={() => navigation.navigate('Details', { data })}
           />

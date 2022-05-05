@@ -1,26 +1,38 @@
 import { View, Text, Image, TextInput } from 'react-native';
 
-import { COLORS, FONTS, SIZES, assets } from '../constants';
+import { COLORS, FONTS, SIZES, assets, SHADOWS } from '../constants';
 
 const HomeHeader = () => {
   return (
-    <View style={{ backgroundColor: COLORS.background, padding: SIZES.font }}>
+    <View style={{ padding: SIZES.font }}>
       <View
         style={{
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
+          paddingBottom: SIZES.medium,
         }}
       >
-        <Image
-          source={assets.logo}
+        <Text
+          style={{
+            marginLeft: 4,
+            fontFamily: FONTS.bold,
+            fontSize: SIZES.font,
+            color: COLORS.white,
+            // marginTop: SIZES.base / 2,
+          }}
+        >
+          32.3M+ NFTs in market.
+        </Text>
+        {/* <Image
+          source={assets}
           resizeMode='contain'
           style={{ width: 100, height: 35, marginLeft: -8 }}
-        />
+        /> */}
 
-        <View style={{ width: 45, height: 45 }}>
+        <View style={{ width: 40, height: 40 }}>
           <Image
-            source={assets.person01}
+            source={assets.person04}
             resizeMode='contain'
             style={{ width: '100%', height: '100%' }}
           />
@@ -38,7 +50,7 @@ const HomeHeader = () => {
         </View>
       </View>
 
-      <View style={{ marginVertical: SIZES.font }}>
+      {/* <View style={{ marginVertical: SIZES.font }}>
         <Text
           style={{
             fontFamily: FONTS.regular,
@@ -59,18 +71,28 @@ const HomeHeader = () => {
         >
           Let's get started...
         </Text>
-      </View>
+      </View> */}
 
       <View style={{ marginTop: SIZES.base }}>
         <View
           style={{
             width: '100%',
             borderRadius: SIZES.font,
-            backgroundColor: COLORS.grey,
+            backgroundColor: COLORS.searchBar,
             flexDirection: 'row',
             alignItems: 'center',
             paddingHorizontal: SIZES.font,
             paddingVertical: SIZES.small - 2,
+            // borderWidth: 2,
+            shadowColor: COLORS.primary,
+            shadowOffset: {
+              width: 0,
+              height: 6,
+            },
+            shadowOpacity: 0.1,
+            shadowRadius: 5,
+
+            elevation: 5,
           }}
         >
           <Image
@@ -80,9 +102,10 @@ const HomeHeader = () => {
           />
           <TextInput
             placeholder='Search NFTs'
+            placeholderTextColor={COLORS.grey}
             style={{
               flex: 1,
-              fontFamily: FONTS.regular,
+              fontFamily: FONTS.light,
               fontSize: SIZES.medium,
             }}
             // onChangeText={onSearch}
