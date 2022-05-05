@@ -6,6 +6,7 @@ import search from '../assets/icons/search.png';
 import like from '../assets/icons/like.png';
 import likeUnclicked from '../assets/icons/likeUnclicked.png';
 
+import blurGradient from '../assets/images/blurGradient.jpg';
 import logo from '../assets/images/logo.png';
 import nft01 from '../assets/images/nft01.png';
 import nft02 from '../assets/images/nft02.jpeg';
@@ -29,6 +30,7 @@ export default {
   like,
   likeUnclicked,
 
+  blurGradient,
   logo,
   nft01,
   nft02,
